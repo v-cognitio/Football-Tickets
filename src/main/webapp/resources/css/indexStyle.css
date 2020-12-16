@@ -1,0 +1,70 @@
+div.auth {
+    padding: 10px 50px 20px;
+    margin: 9% auto auto;
+    width: 30%;
+    background-color: rgba(17, 100, 180, 0.4);
+}
+
+div.box {
+    margin: auto;
+    width: 80%;
+}
+
+div.in {
+    width: auto;
+    margin-bottom: 7px;
+}
+
+form.basic {
+    width: auto;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    font-size: 18pt;
+    font-family: "Segoe UI", sans-serif;
+}
+
+div.okButton {
+    margin: auto;
+    width: 50%;
+}
+
+button.ok {
+    width: 100%;
+    margin: 15px auto auto;
+    background-color: #5da130;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+}
+
+button.ok:hover {
+    background-color: #000080;
+    color: yellow;
+}
+
+h1.title {
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+h2.sign {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: lightyellow;
+    font-weight: 700;
+    padding: 0;
+    margin: 0 0 15px;
+}

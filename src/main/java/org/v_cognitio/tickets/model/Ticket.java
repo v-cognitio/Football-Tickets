@@ -34,6 +34,18 @@ public class Ticket extends BaseEntity{
         this.price = price;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public Float getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         return "Ticket{" +

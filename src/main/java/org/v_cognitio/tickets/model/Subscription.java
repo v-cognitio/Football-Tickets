@@ -28,6 +28,14 @@ public class Subscription extends BaseEntity {
         this.discount = discount;
     }
 
+    public Integer getDiscount() {
+        return discount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     @Override
     public String toString() {
         return "Subscription{" +

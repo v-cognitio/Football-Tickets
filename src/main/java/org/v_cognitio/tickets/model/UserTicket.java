@@ -37,6 +37,14 @@ public class UserTicket extends BaseEntity {
         this.cost = cost;
     }
 
+    public Ticket getTicket() {
+        return ticket;
+    }
+
+    public Float getCost() {
+        return cost;
+    }
+
     @Override
     public String toString() {
         return "UserTicket{" +

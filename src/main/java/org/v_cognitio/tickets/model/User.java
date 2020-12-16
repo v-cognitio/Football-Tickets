@@ -74,6 +74,22 @@ public class User extends BaseEntity {
         return subscription;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public LocalDateTime getSubscriptionExpire() {
+        return subscriptionExpire;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     @Override
     public String toString() {
         return "User{" +
