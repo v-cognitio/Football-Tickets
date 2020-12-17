@@ -23,43 +23,6 @@ div.navbar a:hover {
     color: #0a0a0a;
 }
 
-div.main {
-    margin-top: 40px;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 90%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-p.general {
-    margin-bottom: 0;
-    margin-top: 25px;
-    font-size: 28px;
-    font-weight: 700;
-}
-
-p.sub {
-    margin-top: 5px;
-}
-
-div.person {
-    padding-left: 18px;
-    height: 90%;
-    width: 22%;
-    background-color: rgba(208, 208, 208, 0.9);
-}
-
-div.tickets {
-    height: 90%;
-    width: 30%;
-    flex-grow: 0.85;
-    background-color: rgba(66, 133, 180, 0.9);
-}
-
 body {
     margin-left: 0;
 }
@@ -74,14 +37,16 @@ span.name {
     color: #fff8dc;
 }
 
-p.head {
-    margin-bottom: 3px;
-    font-size: 25px;
-    font-weight: 700;
-}
-
-div.handler {
-    margin-top: 5px;
+div.main {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    width: 70%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: rgba(66, 133, 180, 0.9);
 }
 
 table {
@@ -94,7 +59,7 @@ table {
 }
 
 .tbl-content {
-    height: 79%;
+    height: 89%;
     overflow-x: auto;
     margin-top: 0;
     border: 0;

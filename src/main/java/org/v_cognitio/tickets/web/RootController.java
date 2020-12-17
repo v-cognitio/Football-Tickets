@@ -65,7 +65,22 @@ public class RootController {
         return "personal";
     }
 
-    @GetMapping("/userTickets/buy")
+    @GetMapping("/personal/return")
+    public String returnTicket(HttpServletRequest request) {
+        int ticketId = Integer.parseInt(request.getParameter("ticketId"));
+        userTicketRepository.delete(ticketId);
+        return "redirect:/personal";
+    }
+
+    @GetMapping("/tickets")
+    public String tickets(Model model) {
+        User user = userRepository.getWithTickets(userId);
+        model.addAttribute("user", user);
+        model.addAttribute("tickets", ticketRepository.getAll());
+        return "tickets";
+    }
+
+    @GetMapping("/tickets/buy")
     public String buyTicket(HttpServletRequest request) {
         int ticketId = Integer.parseInt(request.getParameter("ticketId"));
         Ticket ticket = ticketRepository.get(ticketId);
@@ -74,7 +89,7 @@ public class RootController {
                 ticket.getPrice() -
                         ticket.getPrice() * user.getSubscription().getDiscount() / 100);
         userTicketRepository.save(userTicket);
-        return "redirect:/userTickets";
+        return "redirect:/tickets";
     }
 
 }

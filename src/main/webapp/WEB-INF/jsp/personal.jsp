@@ -5,7 +5,6 @@
     <title>Личный кабинет</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/personalStyle.css">
-    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -16,7 +15,7 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="">Купить билеты</a>
+        <a href="${pageContext.request.contextPath}/tickets">Купить билеты</a>
         <a href="">Купить абонемент</a>
         <a href="">О нас</a>
         <span class="name">${user.email}</span>
@@ -34,6 +33,7 @@
                                 <th>Матч</th>
                                 <th>Время</th>
                                 <th>Цена</th>
+                                <th></th>
                             </tr>
                         </thead>
                     </table>
@@ -47,6 +47,9 @@
                                     <td><%=userTicket.getTicket().getDescription()%></td>
                                     <td><%=userTicket.getTicket().getDateTime()%></td>
                                     <td><%=userTicket.getCost()%></td>
+                                    <td class="link">
+                                        <a href="personal/return?ticketId=<%=userTicket.getId()%>">Вернуть</a>
+                                    </td>
                                 </tr>
                             </c:forEach>
                         </tbody>

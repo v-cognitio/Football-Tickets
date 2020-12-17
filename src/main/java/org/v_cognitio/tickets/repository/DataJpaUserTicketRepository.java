@@ -15,4 +15,8 @@ public class DataJpaUserTicketRepository {
     public UserTicket save(UserTicket userTicket) {
         return repository.save(userTicket);
     }
+
+    public boolean delete(int id) {
+        return repository.deleteById(id) != 0;
+    }
 }
