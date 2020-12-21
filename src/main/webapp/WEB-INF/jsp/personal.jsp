@@ -5,6 +5,9 @@
     <title>Личный кабинет</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/personalStyle.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/navbar.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/input.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/table.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {

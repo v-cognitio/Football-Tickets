@@ -1,0 +1,24 @@
+div.navbar {
+    overflow: hidden;
+    background-color: #000080;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+div.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #fff8dc;
+    transition-duration: 0.4s;
+}
+
+div.navbar a:hover {
+    background: #fcfcee;
+    color: #0a0a0a;
+}

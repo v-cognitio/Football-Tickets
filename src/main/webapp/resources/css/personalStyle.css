@@ -1,28 +1,3 @@
-div.navbar {
-    overflow: hidden;
-    background-color: #000080;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-div.navbar a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #fff8dc;
-    transition-duration: 0.4s;
-}
-
-div.navbar a:hover {
-    background: #fcfcee;
-    color: #0a0a0a;
-}
-
 div.main {
     margin-top: 40px;
     padding-top: 40px;
@@ -104,38 +79,10 @@ form p {
     text-align: center;
 }
 
-input {
-    width: 100%;
-    height: 40px;
-    font-size: 18pt;
-    font-family: "Segoe UI", sans-serif;
-}
-
 div.okButton {
     position: absolute;
     bottom: 0;
     width: 100%;
-}
-
-button.ok {
-    width: 100%;
-    margin: 15px auto auto;
-    background-color: #5da130;
-    color: white;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 1000;
-}
-
-button.ok:hover {
-    background-color: #000080;
-    color: yellow;
 }
 
 div.exitModal {
@@ -143,7 +90,6 @@ div.exitModal {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.2s, opacity 0.2s;
-
     position: fixed;
     float: right;
     right: 20px;
@@ -186,73 +132,6 @@ p.head {
 
 div.handler {
     margin-top: 5px;
-}
-
-table {
-    width: 100%;
-    table-layout: fixed;
-}
-
-.tbl-header {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.tbl-content {
-    height: 79%;
-    overflow-x: auto;
-    margin-top: 0;
-    border: 0;
-}
-
-th {
-    padding: 20px 15px 20px 20px;
-    text-align: left;
-    font-weight: 700;
-    font-size: 16px;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-td {
-    padding: 15px 15px 15px 20px;
-    text-align: left;
-    vertical-align:middle;
-    font-weight: 400;
-    font-size: 13px;
-    color: #fff;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-}
-
-td.link {
-    background-color: #78dbe2;
-    text-align: center;
-    transition-duration: 0.4s;
-    color: #000080;
-    padding: 0;
-}
-
-td.link:hover {
-    background-color: #000080;
-    color: #fff8dc;
-}
-
-td.link a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 700;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
 .clickable {

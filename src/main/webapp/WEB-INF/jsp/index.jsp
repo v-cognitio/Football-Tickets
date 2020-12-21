@@ -5,6 +5,7 @@
         <title>Tickets</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/indexStyle.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/commons/input.css">
         <style>
             body {
                 background: url("${pageContext.request.contextPath}/resources/img/main.jpg") no-repeat;
