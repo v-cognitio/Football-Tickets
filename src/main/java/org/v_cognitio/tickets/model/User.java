@@ -82,6 +82,26 @@ public class User extends BaseEntity {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setSubscription(Subscription subscription) {
+        this.subscription = subscription;
+    }
+
+    public void setSubscriptionExpire(LocalDateTime subscriptionExpire) {
+        this.subscriptionExpire = subscriptionExpire;
+    }
+
     public LocalDateTime getSubscriptionExpire() {
         return subscriptionExpire;
     }

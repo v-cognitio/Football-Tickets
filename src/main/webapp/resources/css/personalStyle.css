@@ -62,15 +62,119 @@ div.tickets {
 
 body {
     margin-left: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-span.name {
+div.name {
     display: block;
     padding: 14px 16px 14px 1px;
     text-align: center;
     float: right;
     font-family: 'Montserrat', sans-serif;
     font-weight: 1000;
+    color: #fff8dc;
+}
+
+div.editModal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+div.edit {
+    height: 65%;
+    width: 60%;
+    background-color: rgb(246, 248, 250);
+}
+
+form {
+    width: 35%;
+    height: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+form p {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    font-size: 18pt;
+    font-family: "Segoe UI", sans-serif;
+}
+
+div.okButton {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+button.ok {
+    width: 100%;
+    margin: 15px auto auto;
+    background-color: #5da130;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+}
+
+button.ok:hover {
+    background-color: #000080;
+    color: yellow;
+}
+
+div.exitModal {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s;
+
+    position: fixed;
+    float: right;
+    right: 20px;
+    top: 50px;
+    height: 120px;
+    width: 240px;
+}
+
+div.exit {
+    float: right;
+    padding: 0;
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+    -moz-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+
+div.modalAction {
+    background: #fefefe;
+    margin: 0;
+    height: 40px;
+    width: 230px;
+    padding-left: 10px;
+    padding-top: 20px;
+    transition-duration: 0.4s;
+}
+
+div.modalAction:hover {
+    background-color: #000080;
     color: #fff8dc;
 }
 
@@ -149,4 +253,8 @@ td.link a {
 }
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.clickable {
+    cursor: pointer;
 }

@@ -18,9 +18,67 @@
         <a href="${pageContext.request.contextPath}/tickets">Купить билеты</a>
         <a href="">Купить абонемент</a>
         <a href="">О нас</a>
-        <span class="name">${user.email}</span>
-        <span class="name">${user.name}</span>
+        <div class="name clickable" id="showExitModal">${user.email}</div>
+        <div class="name">${user.name}</div>
     </div>
+
+    <div class="exitModal" id="exitModal">
+        <div class="exit">
+            <div class="modalAction clickable" id="edit">Изменить данные</div>
+            <div class="modalAction clickable" id="exit">Выйти из аккаунта</div>
+        </div>
+    </div>
+
+    <div class="editModal" id="editModal">
+        <div class="edit">
+            <form method="post" action="personal/edit">
+                <p class="general">Имя</p>
+                <div class="in">
+                    <input name="name" value="${user.name}">
+                </div>
+                <p class="general">E-MAIL</p>
+                <div class="in">
+                    <input name="email" type="email" value="${user.email}">
+                </div>
+                <p class="general">Пароль</p>
+                <div class="in">
+                    <input name="password" type="password">
+                </div>
+                <div class="okButton">
+                    <button type="submit" class="ok">OK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let button = document.getElementById("showExitModal");
+        let exitModal = document.getElementById("exitModal");
+        let enabled = false
+        button.onclick = function() {
+            if (!enabled) {
+                exitModal.style.visibility = "visible";
+                exitModal.style.opacity = "1";
+            } else {
+                exitModal.style.visibility = "hidden";
+                exitModal.style.opacity = "0";
+            }
+            enabled = !enabled;
+        }
+
+        let exit = document.getElementById("exit");
+        exit.onclick = function() {
+            window.location.href = "/tickets";
+        }
+
+        button = document.getElementById("edit");
+        let editModal = document.getElementById("editModal");
+        button.onclick = function() {
+            editModal.style.display = "flex";
+            exitModal.style.visibility = "hidden";
+            exitModal.style.opacity = "0";
+        }
+    </script>
 
     <div class="main">
         <div class="tickets">

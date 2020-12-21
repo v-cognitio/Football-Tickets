@@ -72,6 +72,19 @@ public class RootController {
         return "redirect:/personal";
     }
 
+    @PostMapping("/personal/edit")
+    public String editUser(HttpServletRequest request) {
+        User user = userRepository.get(userId);
+        user.setName(request.getParameter("name"));
+        user.setEmail(request.getParameter("email"));
+        String password = request.getParameter("password");
+        if (!password.isBlank()) {
+            user.setPassword(password);
+        }
+        userRepository.save(user);
+        return "redirect:/personal";
+    }
+
     @GetMapping("/tickets")
     public String tickets(Model model) {
         User user = userRepository.getWithTickets(userId);
