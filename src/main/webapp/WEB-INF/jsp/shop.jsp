@@ -16,7 +16,7 @@
     </style>
 </head>
 <body onload="selectActive()">
-    <script src="${pageContext.request.contextPath}/resources/js/shopTab.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/shopTabController.js"></script>
 
     <div class="navbar">
         <a href="${pageContext.request.contextPath}/personal">Личный кабинет</a>
