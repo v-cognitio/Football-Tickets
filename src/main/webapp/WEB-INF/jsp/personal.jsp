@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -18,8 +19,8 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="${pageContext.request.contextPath}/tickets">Купить билеты</a>
-        <a href="">Купить абонемент</a>
+        <a href="${pageContext.request.contextPath}/shop?active=tickets">Купить билеты</a>
+        <a href="${pageContext.request.contextPath}/shop?active=subs">Купить абонемент</a>
         <a href="">О нас</a>
         <div class="name clickable" id="showExitModal">${user.email}</div>
         <div class="name">${user.name}</div>
@@ -92,8 +93,8 @@
                         <thead>
                             <tr>
                                 <th>Матч</th>
-                                <th>Время</th>
-                                <th>Цена</th>
+                                <th>Дата и время</th>
+                                <th>Цена, руб.</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -106,7 +107,7 @@
                                 <jsp:useBean id="userTicket" type="org.v_cognitio.tickets.model.UserTicket"/>
                                 <tr>
                                     <td><%=userTicket.getTicket().getDescription()%></td>
-                                    <td><%=userTicket.getTicket().getDateTime()%></td>
+                                    <td>${userTicket.ticket.dateTime.toLocalDate()} ${userTicket.ticket.dateTime.toLocalTime()}</td>
                                     <td><%=userTicket.getCost()%></td>
                                     <td class="link">
                                         <a href="personal/return?ticketId=<%=userTicket.getId()%>">Вернуть</a>
@@ -126,7 +127,8 @@
             <p class="general">Абонемент</p>
             <p class="sub">${user.subscription.description}, скидка ${user.subscription.discount}%</p>
             <p class="general">Истекает</p>
-            <p class="sub">${user.subscriptionExpire}</p>
+            <p class="sub">${user.subscriptionExpire.toLocalDate()}
+                ${user.subscriptionExpire.toLocalTime().withNano(0).withSecond(0)}</p>
         </div>
     </div>
 </body>

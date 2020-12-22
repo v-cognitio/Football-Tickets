@@ -5,14 +5,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.v_cognitio.tickets.model.Subscription;
 import org.v_cognitio.tickets.model.Ticket;
 import org.v_cognitio.tickets.model.User;
 import org.v_cognitio.tickets.model.UserTicket;
+import org.v_cognitio.tickets.repository.DataJpaSubscriptionRepository;
 import org.v_cognitio.tickets.repository.DataJpaTicketRepository;
 import org.v_cognitio.tickets.repository.DataJpaUserRepository;
 import org.v_cognitio.tickets.repository.DataJpaUserTicketRepository;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.time.LocalDateTime;
 
 @Controller
 public class RootController {
@@ -28,6 +33,9 @@ public class RootController {
 
     @Autowired
     private DataJpaTicketRepository ticketRepository;
+
+    @Autowired
+    private DataJpaSubscriptionRepository subscriptionRepository;
 
     @GetMapping("/")
     public String root() {
@@ -85,16 +93,17 @@ public class RootController {
         return "redirect:/personal";
     }
 
-    @GetMapping("/tickets")
-    public String tickets(Model model) {
+    @GetMapping("/shop")
+    public String shop(Model model, HttpServletRequest request) {
         User user = userRepository.getWithTickets(userId);
         model.addAttribute("user", user);
         model.addAttribute("tickets", ticketRepository.getAll());
-        return "tickets";
+        model.addAttribute("subs", subscriptionRepository.getAll());
+        return "shop";
     }
 
-    @GetMapping("/tickets/buy")
-    public String buyTicket(HttpServletRequest request) {
+    @GetMapping("/shop/buyTicket")
+    public String buyTicket(HttpServletRequest request, RedirectAttributes redirectAttributes) {
         int ticketId = Integer.parseInt(request.getParameter("ticketId"));
         Ticket ticket = ticketRepository.get(ticketId);
         User user = userRepository.get(userId);
@@ -102,7 +111,20 @@ public class RootController {
                 ticket.getPrice() -
                         ticket.getPrice() * user.getSubscription().getDiscount() / 100);
         userTicketRepository.save(userTicket);
-        return "redirect:/tickets";
+        redirectAttributes.addAttribute("active", request.getParameter("active"));
+        return "redirect:/shop";
+    }
+
+    @GetMapping("/shop/buySub")
+    public String buySub(HttpServletRequest request, RedirectAttributes redirectAttributes) {
+        int subId = Integer.parseInt(request.getParameter("subId"));
+        Subscription sub = subscriptionRepository.get(subId);
+        User user = userRepository.get(userId);
+        user.setSubscription(sub);
+        user.setSubscriptionExpire(LocalDateTime.now().plusYears(1));
+        userRepository.save(user);
+        redirectAttributes.addAttribute("active", request.getParameter("active"));
+        return "redirect:/shop";
     }
 
 }

@@ -1,0 +1,73 @@
+body {
+    margin-left: 0;
+}
+
+span.name {
+    display: block;
+    padding: 14px 16px 14px 1px;
+    text-align: center;
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    color: #fff8dc;
+}
+
+div.main {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    width: 70%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: rgba(66, 133, 180, 0.9);
+    position: relative;
+}
+
+.tbl-content {
+    height: 82%;
+    overflow-x: auto;
+    margin-top: 0;
+    border: 0;
+}
+
+div.tab {
+    overflow: hidden;
+    background-color: #000080;
+    width: 100%;
+}
+
+div.tabContent {
+    display: none;
+}
+
+button.tab {
+    font: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    color: #fff8dc;
+    width: 180px;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+button.active {
+    background-color: rgb(120, 163, 193);
+    color: #000080;
+}
+
+button.tab:hover {
+    background-color: rgb(120, 163, 193);
+    color: #000080;
+}
+
+a {
+    cursor: pointer;
+}
