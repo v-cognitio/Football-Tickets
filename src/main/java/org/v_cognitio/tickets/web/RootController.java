@@ -42,15 +42,6 @@ public class RootController {
         return "index";
     }
 
-    @GetMapping("/userTickets")
-    public String getUserTickets(Model model) {
-        model.addAttribute("tickets", ticketRepository.getAll());
-        model.addAttribute("userTickets", userRepository.getWithTickets(
-                userId).getTickets());
-
-        return "userTickets";
-    }
-
     @PostMapping("/personal")
     public String setUser(HttpServletRequest request) {
         String email = request.getParameter("email");
