@@ -2,16 +2,6 @@ body {
     margin-left: 0;
 }
 
-span.name {
-    display: block;
-    padding: 14px 16px 14px 1px;
-    text-align: center;
-    float: right;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 1000;
-    color: #fff8dc;
-}
-
 div.main {
     margin-top: 80px;
     margin-left: auto;

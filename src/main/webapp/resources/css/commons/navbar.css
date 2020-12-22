@@ -22,3 +22,13 @@ div.navbar a:hover {
     background: #fcfcee;
     color: #0a0a0a;
 }
+
+.name {
+    display: block;
+    padding: 14px 16px 14px 1px;
+    text-align: center;
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    color: #fff8dc;
+}
