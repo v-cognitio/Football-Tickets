@@ -118,4 +118,10 @@ public class RootController {
         return "redirect:/shop";
     }
 
+    @GetMapping("/about")
+    public String about(Model model) {
+        User user = userRepository.get(userId);
+        model.addAttribute("user", user);
+        return "about";
+    }
 }

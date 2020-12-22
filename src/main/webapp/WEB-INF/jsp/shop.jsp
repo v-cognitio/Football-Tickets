@@ -20,7 +20,7 @@
 
     <div class="navbar">
         <a href="${pageContext.request.contextPath}/personal">Личный кабинет</a>
-        <a href="">О нас</a>
+        <a href="${pageContext.request.contextPath}/about">О проекте</a>
         <span class="name">${user.email}</span>
         <span class="name">${user.name}</span>
     </div>

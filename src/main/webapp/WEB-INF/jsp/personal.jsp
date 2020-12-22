@@ -21,7 +21,7 @@
     <div class="navbar">
         <a href="${pageContext.request.contextPath}/shop?active=tickets">Купить билеты</a>
         <a href="${pageContext.request.contextPath}/shop?active=subs">Купить абонемент</a>
-        <a href="">О нас</a>
+        <a href="${pageContext.request.contextPath}/about">О проекте</a>
         <div class="name clickable" id="showExitModal">${user.email}</div>
         <div class="name">${user.name}</div>
     </div>

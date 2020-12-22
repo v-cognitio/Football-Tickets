@@ -1,0 +1,30 @@
+body {
+    margin-left: 0;
+}
+
+div.main {
+    margin: 80px auto 15px;
+    width: 75%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: rgba(66, 133, 180, 0.9);
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+div.rubric {
+    width: 85%;
+    margin: 32px auto 15px;
+    padding: 5px 20px;
+    background-color: #ddbec3;
+}
+
+.h1, h2, p {
+    font-family: inherit;
+}
+
+div.map {
+    width: 90%;
+    margin: 0 auto 25px;
+}
